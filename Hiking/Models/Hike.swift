@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct Hike: Identifiable {
-    let id = UUID()
+    let id: UUID = UUID()
     let name: String
     let imageURL: String
     let miles: Double
@@ -19,9 +19,9 @@ struct Hike: Identifiable {
 extension Hike {
     static func all() -> [Hike] {
         return [
-            Hike(name: "Hike1", imageURL: "img", miles: 10),
-            Hike(name: "Hike2", imageURL: "img", miles: 10),
-            Hike(name: "Hike3", imageURL: "img", miles: 10)
+            Hike(name: "Zugspitze", imageURL: "spitze", miles: 10),
+            Hike(name: "Brocken", imageURL: "brocken", miles: 5),
+            Hike(name: "Schwarzwald", imageURL: "schwarzwald", miles: 8)
         ]
     }
 }

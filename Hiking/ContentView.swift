@@ -14,7 +14,17 @@ struct ContentView: View {
     
     var body: some View {
         List(hikes) { hike in
-            Text(hike.name)
+            return HStack {
+                Image(hike.imageURL)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(4)
+
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(hike.name)
+                    Text(String(format: "%.1f", hike.miles) + " miles")
+                }
+            }
         }
     }
 }
